@@ -1,10 +1,10 @@
 import './intro.css';
 
 
-function AboutDivider() {
+function Divider() {
     return(
         <div id="about-divider"></div>
     )
 }
 
-export default AboutDivider;
+export default Divider;

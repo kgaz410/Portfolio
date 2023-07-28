@@ -2,14 +2,14 @@ import * as React from 'react';
 import { Box, Stack, Typography } from '@mui/material';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHtml5, faJs, faReact, faGithub, faGitAlt, faCss3 } from "@fortawesome/free-brands-svg-icons";
-import { faGears } from "@fortawesome/free-solid-svg-icons";
+import { faGears, faDatabase, faLaptop } from "@fortawesome/free-solid-svg-icons";
 
 
  function Skills() {
   return (
 
     // SKILLS INTRO
-    <Box sx={{ display: 'flex', backgroundColor: '#435670', paddingLeft: 25, paddingRight: 25, paddingTop: 15, paddingBottom: 15, flexDirection: 'column'}} >
+    <Box sx={{ display: 'flex', backgroundColor: '#435670', paddingLeft: 25, paddingRight: 25, paddingTop: 15, paddingBottom: 25, flexDirection: 'column'}} >
 
         <Box sx={{display: 'flex', marginBottom: 5, flexDirection: 'column'}}>
             <Typography sx={{fontFamily: 'Poppins', fontSize: 25, margin: 1, color: '#241C2F', fontWeight: 'bold'}}>
@@ -51,6 +51,11 @@ import { faGears } from "@fortawesome/free-solid-svg-icons";
                 <FontAwesomeIcon icon={faReact} style={{color: "#ffffff", height: 100}} />
                 <Typography sx={{textAlign: 'center', color: 'white', fontSize: 20}}>React</Typography>
             </Box>
+
+            <Box sx={{display: 'flex', flexDirection: 'column', padding: 2, justifyContent: 'space-between', width: 100, height: 150}}>
+                <FontAwesomeIcon icon={faLaptop} style={{color: "#ffffff", height: 100}} />
+                <Typography sx={{textAlign: 'center', color: 'white', fontSize: 20}}>Responsive Websites</Typography>
+            </Box>
         </Stack>
         
 
@@ -78,6 +83,11 @@ import { faGears } from "@fortawesome/free-solid-svg-icons";
             <Box sx={{display: 'flex', flexDirection: 'column', padding: 2, justifyContent: 'space-between', width: 100, height: 150}}>
                 <img style={{height: 130}}src="./src/assets/otttq59q1hrivd9utlsva6mdg9-7b390df09dc70e1b641188de2bb713fc.png"></img>
                 <Typography sx={{textAlign: 'center', color: 'white', fontSize: 20}}>VS Code</Typography>
+            </Box>
+
+            <Box sx={{display: 'flex', flexDirection: 'column', padding: 2, justifyContent: 'space-between', width: 100, height: 150}}>
+                <FontAwesomeIcon icon={faDatabase} style={{color: "#ffffff", height: 100}} />                
+                <Typography sx={{textAlign: 'center', color: 'white', fontSize: 20}}>PostgreSQL</Typography>
             </Box>
         </Stack>
      </Box>
