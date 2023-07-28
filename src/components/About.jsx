@@ -3,10 +3,20 @@ import { Box, Typography, Stack, Avatar } from '@mui/material';
 
 function About() {
   return (
-    <Stack sx={{paddingLeft: 25, paddingRight: 25, paddingTop: 10, height: 650, backgroundColor: '#F6F2F3'}} direction="row" spacing={5}>
+    <Stack sx={{paddingLeft: 25, paddingRight: 25, paddingTop: 10, backgroundColor: '#F6F2F3'}} 
+    direction={{xs: 'column', sm: 'column', md: 'row', lg: 'row', xl: 'row'}}
+    spacing={{xs: 1, sm: 2, md: 3, lg: 4, xl: 5}}
+    height={{xs: 1600, sm: 1600, md: 1900, lg: 700, xl:650}}
+    >
 
-        <Stack sx={{display: 'flex', flexDirection: 'column', marginTop: -7}}>
-            <Box sx={{display: 'flex', flexDirection: 'column'}}>
+        <Stack sx={{display: 'flex', marginTop: -7}} 
+        direction={{xs: 'column', sm: 'column', md: 'column', lg: 'column', xl: 'column'}}
+        spacing={{xs: 1, sm: 2, md: 3, lg: 4, xl: 5}}
+        >
+
+            <Box sx={{border: 'solid', display: 'flex', flexDirection: 'column', width: {
+                 xs: 300, sm: 300, md: 300, lg: 300, xl: 350  
+            }}}>
                 <Typography sx={{fontFamily: 'Poppins', fontSize: 25, margin: 1, color: '#9E4859'}}>
                     About
                 </Typography>
@@ -19,7 +29,9 @@ function About() {
         </Stack>
      
         
-        <Box sx={{display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: 5}}>
+        <Box sx={{ border: 'solid', borderColor: 'red', display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: 5, width: {
+            xs: 300, sm: 300, md: 700, lg: 1500, xl: 2000}
+            }}>
             <Box>
                 <Typography sx={{fontFamily: 'Crimson Text', fontSize: 31, color: '#838FA9'}}>A curiosity-driven Web Developer with design chops.</Typography>
             <br></br>
