@@ -1,17 +1,17 @@
 import * as React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faSquareGithub } from "@fortawesome/free-brands-svg-icons";
-import { Box, Button, Stack, TextField, Typography } from '@mui/material';
+import { Box, Button, Link, Stack, TextField, Typography } from '@mui/material';
 
 
 function Contact() {
     return(
 
         //CONTACT INTRO
-        <Box sx={{ border: 'solid', borderColor: 'blue', display: 'flex', backgroundColor: '#F6F2F3', paddingLeft: 25, paddingRight: 25, paddingTop: 15, paddingBottom: 15, flexDirection: 'column'}} >
+        <Box sx={{display: 'flex', backgroundColor: '#F6F2F3', paddingLeft: 25, paddingRight: 25, paddingTop: 15, paddingBottom: 15, flexDirection: 'column'}} >
 
                 {/* CONTACT HEADER */}
-                <Box sx={{ border: 'solid', borderColor: 'orange',display: 'flex', marginBottom: 10, flexDirection: 'column'}}>
+                <Box sx={{display: 'flex', marginBottom: 10, flexDirection: 'column'}}>
                     <Typography sx={{fontFamily: 'Poppins', fontSize: 25, margin: 1, color: '#241C2F', fontWeight: 'bold'}}>
                         Contact
                     </Typography>
@@ -37,13 +37,13 @@ function Contact() {
 
             {/* TROUBLESHOOT ONCE DEPLOY */}
             {/* INPUTS */}
-                <Stack component="form" sx={{display: 'flex', justifyContent: 'space-evenly', border: 'solid', borderColor: 'red', 
+                <Stack component="form" sx={{display: 'flex', justifyContent: 'space-evenly', 
                     width: { xs: 300, sm: 400, md: 'inherit', large: 'inherit', xl: 'inherit'}, flexDirection: {xs: 'column', sm: 'column', md: 'column', lg: 'row', xl: 'row'}}}>
 
 
                     <label htmlFor='message'>
                     <form action="https://formsubmit.co/kgaz410@gmail.com" method="POST"
-                        style={{padding: 5, display: 'flex', flexDirection: 'column', width: 450, height: 500, justifyContent: 'space-evenly'}}>
+                        style={{padding: 5, display: 'flex', flexDirection: 'column', height: 500, justifyContent: 'space-evenly', minWidth: 250, maxWidth: 450}}>
                         
                         <TextField 
                             required
@@ -79,19 +79,23 @@ function Contact() {
 
                     </label>
 
-                    <Box sx={{padding: 5, border: 'solid'}}>
+                    <Box sx={{padding: 5}}>
                         <Typography sx={{fontFamily: 'Poppins', fontSize: 22, color: '#241C2F', fontWeight: 'bolder'}}>
                             Feeling social?
                             <br></br> 
                             <br></br>
                             Find me on these online spaces too!
                         </Typography>
+
                         <br></br>
-                        <Box sx={{display: 'flex',justifyContent: 'space-evenly', border: 'solid', borderColor: 'green'}}>
-                            <FontAwesomeIcon icon={faLinkedin} style={{ color: '#435670',height: 50}} />
-                            <FontAwesomeIcon icon={faSquareGithub} style={{ color: '#435670',height: 50}} />
 
-
+                        <Box sx={{display: 'flex',justifyContent: 'space-evenly'}}>
+                            <Link href="https://www.linkedin.com/in/kelseygazaway/">
+                                <FontAwesomeIcon icon={faLinkedin} style={{ color: '#435670',height: 50}} />
+                            </Link>
+                            <Link href="https://github.com/kgaz410">
+                                <FontAwesomeIcon icon={faSquareGithub} style={{ color: '#435670',height: 50}} />
+                            </Link>
                         </Box>
 
                     </Box>

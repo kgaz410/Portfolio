@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box, Button, Stack, Typography } from '@mui/material';
+import { Box, Button, Stack, Typography, Link } from '@mui/material';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHtml5, faJs, faReact, faCss3 } from "@fortawesome/free-brands-svg-icons";
 import { faDatabase, faGears } from "@fortawesome/free-solid-svg-icons";
@@ -12,7 +12,7 @@ function WorkHome() {
         <Box sx={{display: 'flex', backgroundColor: '#9E4859', paddingLeft: 25, paddingRight: 25, paddingTop: 15, paddingBottom: 15, flexDirection: 'column'}} >
 
             {/* WORK HEADER */}
-            <Box sx={{display: 'flex', marginBottom: 10, flexDirection: 'column'}}>
+            <Box sx={{display: 'flex', marginBottom: 5, flexDirection: 'column'}}>
                 <Typography sx={{fontFamily: 'Poppins', fontSize: 25, margin: 1, color: '#241C2F', fontWeight: 'bold'}}>
                     Projects
                 </Typography>
@@ -26,12 +26,12 @@ function WorkHome() {
 
             {/* PROJECT 1 */}
             <Stack sx={{display: 'flex', marginBottom: 10, flexDirection: {
-                sx: 'column', sm: 'column', md: 'column', lg: 'column', xl: 'row'
+                sx: 'column', sm: 'column', md: 'column', lg: 'row', xl: 'row'
             }}}
             >
                 
                 <Box component="img" sx={{display: 'flex', justifyContent: 'center', alignSelf: 'center', margin: 3, height: 450, 
-                    width: { xs: 400, sm: 500, md: 550, lg: 700, xl: 800}}} 
+                    width: { xs: 400, sm: 500, md: 550, lg: 650, xl: 800}}} 
                     src="./src/assets/games.svg" alt='website screenshot'>
                 </Box>
 
@@ -59,21 +59,23 @@ function WorkHome() {
 
 
                     </Stack>
-                    {/* ADD BUTTON FUNCTIONALITY */}
+                
                     {/* https://levelup-games.netlify.app/ */}
-                    <Button sx={{margin: 1, backgroundColor: '#838FA9', color: '#241C2F', fontSize: 20, height: 60, width: 200}}>View It Here</Button>
+                    <Link href='https://levelup-games.netlify.app/'>
+                        <Button sx={{margin: 1, backgroundColor: '#838FA9', color: '#241C2F', fontSize: 20, height: 60, width: 200}}>View It Here</Button>
+                    </Link>
                 </Box>
             </Stack>
 
             {/* PROJECT 2 */}
 
             <Stack sx={{display: 'flex', marginBottom: 10, flexDirection: {
-                sx: 'column', sm: 'column', md: 'column', lg: 'column', xl: 'row'
+                sx: 'column', sm: 'column', md: 'column', lg: 'row', xl: 'row'
             }}}
             >
                 
                 <Box component="img" sx={{display: 'flex', justifyContent: 'center', alignSelf: 'center', margin: 3, height: 450, 
-                    width: { xs: 400, sm: 500, md: 550, lg: 700, xl: 800}}} 
+                    width: { xs: 400, sm: 500, md: 550, lg: 650, xl: 800}}} 
                     src="./src/assets/strangers.svg" alt='website screenshot'>
                 </Box>
 
@@ -100,7 +102,9 @@ function WorkHome() {
 
                     {/* ADD BUTTON FUNCTIONALITY */}
                     {/* https://strangersthingsproject.netlify.app/ */}
-                    <Button sx={{margin: 1, backgroundColor: '#838FA9', color: '#241C2F', fontSize: 20, height: 60, width: 200}}>View It Here</Button>
+                    <Link href="https://strangersthingsproject.netlify.app/">
+                        <Button sx={{margin: 1, backgroundColor: '#838FA9', color: '#241C2F', fontSize: 20, height: 60, width: 200}}>View It Here</Button>
+                    </Link>
                 </Box>
             </Stack>
 

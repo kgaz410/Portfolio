@@ -6,8 +6,9 @@ import Skills from './components/Skills';
 import WorkHome from './components/WorkHome';
 import Contact from './components/Contact';
 import { Route, Routes } from 'react-router-dom';
-
+import BottomNav from './components/BottomNav';
 import './App.css'
+
 
 
 
@@ -22,6 +23,7 @@ function App() {
       <Divider />
       <WorkHome />
       <Contact />
+      <BottomNav />
 
 
       <Routes>
