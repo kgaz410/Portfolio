@@ -1,4 +1,3 @@
-import Navbar from './components/Navbar'
 import Intro from './components/Intro';
 import About from './components/About';
 import Divider from './components/Divider';
@@ -8,6 +7,8 @@ import Contact from './components/Contact';
 import { Route, Routes } from 'react-router-dom';
 import BottomNav from './components/BottomNav';
 import './App.css'
+import { Box, Stack } from '@mui/material';
+import DividerAbout from './components/DividerAbout';
 
 
 
@@ -15,15 +16,21 @@ import './App.css'
 
 function App() {
   return(
-    <>
-      <Navbar/>
-      <Intro/>
-      <About/>
-      <Skills/>
-      <Divider />
-      <WorkHome />
-      <Contact />
-      <BottomNav />
+  <Box>
+
+     <Stack >
+        <Intro/>
+        <DividerAbout />
+        <About/>
+        <Skills/>
+        <Divider />
+        <WorkHome />
+        <Contact />
+        <BottomNav />
+      </Stack>
+
+
+
 
 
       <Routes>
@@ -34,7 +41,7 @@ function App() {
         <Route path="/contact"></Route>
       </Routes>
     
-    </>
+    </Box>
 
   )
 

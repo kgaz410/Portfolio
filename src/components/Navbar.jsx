@@ -36,9 +36,9 @@ function NavBar() {
 
 
       
-                <Button sx={{display: 'flex', width: 5, fontSize: 10, border: 'solid', color: '#45162D', borderRadius: 5, height: 40, position: 'fixed', backgroundColor: 'rgb(224, 222, 222)', marginTop: 15 }}>
+                {/* <Button sx={{display: 'flex', width: 5, fontSize: 10, border: 'solid', color: '#45162D', borderRadius: 5, height: 40, position: 'fixed', backgroundColor: 'rgb(224, 222, 222)', marginTop: 15 }}>
                     Resume
-                </Button>
+                </Button> */}
 
           
  
