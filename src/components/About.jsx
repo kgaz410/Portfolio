@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { styled } from '@mui/system';
-
 import { Box, Typography, Avatar } from '@mui/material';
 
 
@@ -38,8 +37,11 @@ const AboutPara = styled(Box) ({
 })
 
 function About() {
+
+
   return (
-    <AboutContainer sx={{flexDirection: {xs: 'column', sm: 'row'}}}>
+    <AboutContainer id="about" sx={{flexDirection: {xs: 'column', sm: 'row'}}}>
+
         <AboutBox sx={{flexDirection: {xs: 'column', sm: 'row'}}}>
             <AboutIntroPic>
                 <Typography sx={{fontFamily: 'Poppins', fontSize: 25, margin: 1, color: '#9E4859'}}>
@@ -76,5 +78,5 @@ function About() {
   );
 }
 
-export default About;
+export default  About;
 

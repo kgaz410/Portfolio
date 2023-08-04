@@ -59,7 +59,7 @@ function Contact() {
     return(
 
         //CONTACT INTRO
-            <ContactContainer>
+            <ContactContainer id='contact'>
                 {/* CONTACT HEADER */}
                 <ContactIntro>
                     <Typography sx={{fontFamily: 'Poppins', fontSize: 25, margin: 1, color: '#241C2F', fontWeight: 'bold'}}>

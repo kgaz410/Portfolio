@@ -9,36 +9,46 @@ import BottomNav from './components/BottomNav';
 import './App.css'
 import { Box, Stack } from '@mui/material';
 import DividerAbout from './components/DividerAbout';
+import NavBar from './components/Navbar';
+
+
+
 
 
 
 
 
 function App() {
+
+
+
   return(
   <Box>
-
+     
      <Stack >
-        <Intro/>
+        <NavBar/>
+        <Intro />
         <DividerAbout />
-        <About/>
+        <About />
         <Skills/>
         <Divider />
         <WorkHome />
         <Contact />
         <BottomNav />
+             
       </Stack>
 
 
 
 
 
+
       <Routes>
-        <Route path="/"></Route>
-        <Route path="/about"></Route>
-        <Route path="/skills"></Route>
-        <Route path="/projects"></Route>
-        <Route path="/contact"></Route>
+        <Route path="/" ></Route>
+        <Route path="/about" ></Route>
+        <Route path="/skills" ></Route>
+        <Route path="/projects" ></Route>
+        <Route path="/contact" ></Route>
       </Routes>
     
     </Box>

@@ -55,7 +55,7 @@ const SingleIconBox = styled(Box) ({
   return (
 
     // SKILLS INTRO
-    <SkillsContainer>
+    <SkillsContainer id='skills'>
         <SkillIntro>
             <Typography sx={{fontFamily: 'Poppins', fontSize: 25, margin: 1, color: '#241C2F', fontWeight: 'bold'}}>
                 Skills & Tools

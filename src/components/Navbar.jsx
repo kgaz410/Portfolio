@@ -1,59 +1,117 @@
 import * as React from 'react';
-import { Box, Button, Toolbar, Typography, Fab } from '@mui/material';
+import './intro.css';
+import { Box, Button, Toolbar, Typography, Menu, MenuItem } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
+import { Link as Scroll} from 'react-scroll';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { styled } from '@mui/system';
+import { HashLink } from 'react-router-hash-link'
 
 
 
+const Navbar = styled(Box) ({
+    display: 'flex',
+    justifyContent: 'space-between',
+    position: 'sticky',
+    top: 0,
+    zIndex: 10,
+    backgroundColor: '#241C2F',
+    opacity: '98%'
+})
+
+const LinkStyle = styled(Typography) ({
+    color: 'rgb(224, 222, 222)',
+    textDecoration: 'none',
+    fontFamily: 'Poppins', 
+    cursor: 'pointer',
+
+})
 
 
 function NavBar() {
+    const [anchorEl, setAnchorEl] = useState(null);
+    const open = Boolean(anchorEl);
+
+    const handleClick = (event) => {
+      setAnchorEl(event.currentTarget);
+    };
+    const handleClose = () => {
+      setAnchorEl(null);
+    };
+
   return (
-    <Box sx={{ display: 'flex', flexGrow: 1, height: 100}}>
-        <Toolbar sx={{display: 'flex', height: 120, justifyContent: 'space-between', border: 'solid', width: {
-            xs: 100, sm: 600, md: 2000, lg: 2000, xl: 2000
-        }}}>
-            <Box sx={{display: 'flex', width: {
-                xs: 100, sm: 600, md: 800, lg: 800, xl: 800
-            }, height: 60, justifyContent: 'space-around', alignItems: 'center'}}>
-                
-                <Typography component={Link} sx={{ fontSize: 15, color: 'rgb(224, 222, 222)', fontFamily: 'Poppins', letterSpacing: 2, textDecoration: "none"}}>
-                    Home
-                </Typography>
-                <Typography component={Link} sx={{ fontSize: 15, color: 'rgb(224, 222, 222)', fontFamily: 'Poppins', letterSpacing: 2, textDecoration: "none"}}>
-                    About
-                </Typography>
-                <Typography component={Link} sx={{ fontSize: 15, color: 'rgb(224, 222, 222)', fontFamily: 'Poppins', letterSpacing: 2, textDecoration: "none"}}>
-                    Skills
-                </Typography>
-                <Typography component={Link} sx={{ fontSize: 15, color: 'rgb(224, 222, 222)', fontFamily: 'Poppins', letterSpacing: 2, textDecoration: "none"}}>
-                    Projects
-                </Typography>
-                <Typography component={Link} sx={{ fontSize: 15, color: 'rgb(224, 222, 222)', fontFamily: 'Poppins', letterSpacing: 2, textDecoration: "none"}}>
-                    Contact Me
-                </Typography>
-            </Box>
+            <Navbar>
+                <Toolbar sx={{width: '60%', display: 'flex', justifyContent: 'space-between'}}>
 
-
-
-      
-                {/* <Button sx={{display: 'flex', width: 5, fontSize: 10, border: 'solid', color: '#45162D', borderRadius: 5, height: 40, position: 'fixed', backgroundColor: 'rgb(224, 222, 222)', marginTop: 15 }}>
-                    Resume
-                </Button> */}
-
-          
- 
-
-
-
-
-            {/* Add onClick */}
-            {/* <Box sx={{display: 'flex', border: 'solid', height: 60}}>
-                <Button sx={{ fontSize: 14, color: 'rgb(224, 222, 222)', fontFamily: 'Poppins'}}>
-                    Resume
+                {/* DROPDOWN MENU */}
+                <Button sx={{display: {xs: 'block', sm: 'none'}}}
+                   id="demo-positioned-button"
+                   aria-controls={open ? 'demo-positioned-button' : undefined}
+                   aria-haspopup="true"
+                   aria-expanded={open ? 'true' : undefined}
+                   onClick={handleClick}>
+                    <MenuIcon sx={{color: 'rgb(224, 222, 222)', display: {xs: 'block', sm: 'none'}}}></MenuIcon>
                 </Button>
-            </Box> */}
-        </Toolbar>
-    </Box>
+
+
+        
+                <Menu
+                    id="demo-positioned-menu"
+                    aria-labelledby="demo-positioned-button"
+                    anchorEl={anchorEl}
+                    open={open}
+                    onClose={handleClose}
+                    anchorOrigin={{
+                    vertical: 'top',
+                    horizontal: 'left',
+                    }}
+                    transformOrigin={{
+                    vertical: 'top',
+                    horizontal: 'left',
+                    }}>
+                        
+                    <MenuItem component={HashLink} to='#home' onClick={handleClose}>Home</MenuItem>
+                    <MenuItem component={HashLink} to='#about' onClick={handleClose}>About</MenuItem>
+                    <MenuItem component={HashLink} to='#skills' onClick={handleClose}>Skills</MenuItem>
+                    <MenuItem component={HashLink} to='#projects' onClick={handleClose}>Projects</MenuItem>
+                    <MenuItem component={HashLink} to='#contact' onClick={handleClose}>Contact Me</MenuItem>
+                    <MenuItem component={Link}>Resume</MenuItem>
+                </Menu>
+
+
+
+                    <LinkStyle className='menu-link' to='home' smooth='true' duration={500} spy={true} exact='true' offset={-100} activeClass='active'
+                        component={Scroll}  sx={{ display: {xs: 'none', sm: 'block'}}}>
+                        Home
+                    </LinkStyle>
+
+                    <LinkStyle to='about' smooth='true' duration={500} spy={true} exact='true' offset={100} activeClass='active'
+                        component={Scroll}  sx={{ display: {xs: 'none', sm: 'block'}}}>
+                        About
+                    </LinkStyle>
+
+                    <LinkStyle to='skills' smooth='true' duration={500} spy={true} exact='true' offset={100} activeClass='active'
+                        component={Scroll} sx={{ display: {xs: 'none', sm: 'block'}}}>
+                        Skills
+                    </LinkStyle>
+
+                    <LinkStyle to='projects' smooth='true' duration={500} spy={true} exact='true' offset={100} activeClass='active'
+                        component={Scroll} sx={{ display: {xs: 'none', sm: 'block'}}}>
+                        Projects
+                    </LinkStyle>
+
+                    <LinkStyle to='contact' smooth='true' duration={500} spy={true} exact='true' offset={100} activeClass='active'
+                        component={Scroll} sx={{ display: {xs: 'none', sm: 'block'}}}>
+                        Contact Me
+                    </LinkStyle>
+                </Toolbar>
+                <Button sx={{ display: {xs: 'none', sm: 'block'}}}>RESUME</Button>
+            </Navbar>
+
+
+       
+
   );
 }
 

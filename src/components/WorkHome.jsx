@@ -51,7 +51,7 @@ function WorkHome() {
     return(
 
         //WORK INTRO
-        <WorkContainer>
+        <WorkContainer id='projects'>
             {/* WORK HEADER */}
             <WorkIntro>
                 <Typography sx={{fontFamily: 'Poppins', fontSize: 25, margin: 1, color: '#241C2F', fontWeight: 'bold'}}>
