@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { styled } from '@mui/system';
+import me from '../assets/me.jpg'
 import { Box, Typography, Avatar } from '@mui/material';
 
 
@@ -52,7 +53,7 @@ function About() {
                 </Typography>
 
                 <Avatar sx={{boxShadow: 20, marginTop: '2rem', width: {xs: '15rem', sm: '25rem'}, height: {xs: '15rem', sm: '25rem'}}}
-                    alt="Kelsey" src="./src/assets/me.jpg" />
+                    alt="Kelsey" src={me} />
 
             </AboutIntroPic>
          

@@ -1,5 +1,7 @@
 import * as React from 'react';
 import { styled } from '@mui/system';
+import games from '../assets/games.svg';
+import stranger from '../assets/strangers.svg';
 import { Box, Button, Stack, Typography, Link } from '@mui/material';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHtml5, faJs, faReact, faCss3 } from "@fortawesome/free-brands-svg-icons";
@@ -71,7 +73,7 @@ function WorkHome() {
                 <SingleProjectBox sx={{flexDirection: {xs: 'column', sm: 'column', md: 'column', lg: 'row'}}}>
                     <Box component="img" sx={{display: 'flex', justifyContent: 'center', alignSelf: 'center', margin: 3, height: 350, 
                         width: { xs: 400, sm: 500, md: 550, lg: 650, xl: 800}}} 
-                        src="./src/assets/games.svg" alt='website screenshot'>
+                        src={games} alt='website screenshot'>
                     </Box>
 
                     <Box sx={{display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly' }}>
@@ -114,7 +116,7 @@ function WorkHome() {
                 <SingleProjectBox sx={{flexDirection: {xs: 'column', sm: 'column', md: 'column', lg: 'row'}}}>
                     <Box component="img" sx={{display: 'flex', justifyContent: 'center', alignSelf: 'center', margin: 3, height: 350, 
                         width: { xs: 400, sm: 500, md: 550, lg: 650, xl: 800}}} 
-                        src="./src/assets/strangers.svg" alt='website screenshot'>
+                        src={stranger} alt='website screenshot'>
                     </Box>
 
                     <Box sx={{display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly' }}>

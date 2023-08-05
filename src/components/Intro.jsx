@@ -1,5 +1,6 @@
 import { Box, Typography } from '@mui/material';
 import { styled } from '@mui/system';
+import mountains from '../assets/mountains.jpg'
 import Typed from 'typed.js';
 import './intro.css';
 import { useRef, useEffect } from 'react';
@@ -7,12 +8,10 @@ import { useRef, useEffect } from 'react';
 
 
 
-const imageURL = "./src/assets/mountains.jpg"
-
 const IntroBackground = styled(Box)({
     width: "100%",
     height: "100%",
-    backgroundImage:`url(${imageURL})`,
+    backgroundImage: `url(${mountains})`,
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
