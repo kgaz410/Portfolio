@@ -6,15 +6,9 @@ import WorkHome from './components/WorkHome';
 import Contact from './components/Contact';
 import { Route, Routes } from 'react-router-dom';
 import BottomNav from './components/BottomNav';
-import './App.css'
 import { Box, Stack } from '@mui/material';
 import DividerAbout from './components/DividerAbout';
 import NavBar from './components/Navbar';
-
-
-
-
-
 
 
 
