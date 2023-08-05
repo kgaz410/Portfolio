@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { styled } from '@mui/system';
+import vscodeicon from '../assets/vscodeicon.png';
 import { Box, Typography } from '@mui/material';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHtml5, faJs, faReact, faGithub, faGitAlt, faCss3 } from "@fortawesome/free-brands-svg-icons";
@@ -113,7 +114,7 @@ const SingleIconBox = styled(Box) ({
                 </SingleIconBox>
 
                 <SingleIconBox>
-                    <img style={{height: 130}}src="./src/assets/vscodeicon.png"></img>
+                    <img style={{height: 130}} src={vscodeicon}></img>
                     <Typography sx={{textAlign: 'center', color: 'white', fontSize: 20}}>VS Code</Typography>
                 </SingleIconBox>
 

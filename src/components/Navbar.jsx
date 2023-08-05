@@ -36,7 +36,7 @@ const LinkStyle = styled(Typography) ({
 })
 
 
-const resumeURL = "http://localhost:5173/Portfolio-Resume.pdf"
+const resumeURL = "http://localhost:5173/Port-Resume.pdf"
 
 
 
