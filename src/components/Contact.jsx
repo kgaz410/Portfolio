@@ -2,7 +2,8 @@ import * as React from 'react';
 import { styled } from '@mui/system';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faSquareGithub } from "@fortawesome/free-brands-svg-icons";
-import { Box, Button, Link, Stack, TextField, Typography } from '@mui/material';
+import { Box, Button, Link, TextField, Typography } from '@mui/material';
+
 
 
 const ContactContainer = styled(Box) ({
@@ -33,7 +34,7 @@ const ContactFormBox = styled(Box) ({
 
 })
 
-const ContactInputsBox = styled(Box) ({
+const ContactInputsBox = styled("form") ({
     display: 'flex',
     justifyContent: 'space-evenly',
     padding: '1rem',
@@ -56,6 +57,8 @@ const FeelingSocialBox = styled(Box) ({
 
 
 function Contact() {
+
+
     return(
 
         //CONTACT INTRO
@@ -73,7 +76,7 @@ function Contact() {
                 <br></br>
 
                     <Typography sx={{fontFamily: 'Poppins', fontSize: 22, color: '#241C2F', fontWeight: 'bolder'}}>
-                        Dropping a line to say hi or ask for my resume? 
+                        Dropping by to say hi or ask for my resume? 
                         <br></br>
                         I’d love to hear from you!
                     </Typography> 
@@ -85,12 +88,23 @@ function Contact() {
                     </Typography> 
                 </ContactIntro>
 
+
+
+
                 {/* MAIN FORM BOX */}
                 <ContactFormBox sx={{flexDirection: {xs: 'column', sm: 'column', md: 'row'}, height: {xs: '35rem'}}}>
-                    <ContactInputsBox action="https://formsubmit.co/kgaz410@gmail.com" method="POST" sx={{width: {xs: 'inherit', sm: 'inherit', md: '50%'}}}>
-                        <TextField required fullWidth label="Name" id="fullWidth"/>
-                        <TextField required fullWidth label="Email" id="fullWidth" />
-                        <TextField required fullWidth multiline rows={5} label="Message" id="fullWidth" />
+                    <ContactInputsBox action="https://api.web3forms.com/submit" method="POST" 
+                            sx={{width: {xs: 'inherit', sm: 'inherit', md: '50%'}}}>
+
+                        <input type="hidden" name="access_key" value="d80e0cf4-c196-41bb-8d89-b7222da95f8c"   />     
+
+                        <TextField required fullWidth type="text" name="name"  label="Name" id="fullWidth" />
+                        
+                        <TextField required fullWidth type="email" name= "email"  label="Email" id="fullWidth" />
+
+                        <TextField required fullWidth type="text" name= "message"  multiline rows={5} label="Message" id="fullWidth" />
+
+                        <div className='h-captcha' data-captcha="true"></div>    
 
                         <Button type="submit" sx={{ margin: '1rem', alignSelf: 'center', backgroundColor: '#45162D', color: '#F6F2F3', fontSize: 20, height: 60, width: {xs: 'inherit', sm: '8rem'}}}>Send</Button>
 

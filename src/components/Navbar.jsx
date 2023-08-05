@@ -1,5 +1,7 @@
 import * as React from 'react';
 import './intro.css';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFileArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { Box, Button, Toolbar, Typography, Menu, MenuItem } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link as Scroll} from 'react-scroll';
@@ -25,8 +27,17 @@ const LinkStyle = styled(Typography) ({
     textDecoration: 'none',
     fontFamily: 'Poppins', 
     cursor: 'pointer',
+    '&:hover' : {
+        borderBottom: 'solid',
+        borderBottomWidth: '0.15rem',
+        borderBottomColor: 'rgb(224, 222, 222)',
+    }
 
 })
+
+
+const resumeURL = "http://localhost:5173/Portfolio-Resume.pdf"
+
 
 
 function NavBar() {
@@ -39,6 +50,17 @@ function NavBar() {
     const handleClose = () => {
       setAnchorEl(null);
     };
+
+    // DOWNLOAD RESUME FUNCTION
+    const downloadClick = (url) => {
+        const fileName = url.split('/').pop()
+        const aTag = document.createElement('a')
+        aTag.href=url
+        aTag.setAttribute('download', fileName)
+        document.body.appendChild(aTag)
+        aTag.click()
+        aTag.remove()
+    }
 
   return (
             <Navbar>
@@ -76,7 +98,7 @@ function NavBar() {
                     <MenuItem component={HashLink} to='#skills' onClick={handleClose}>Skills</MenuItem>
                     <MenuItem component={HashLink} to='#projects' onClick={handleClose}>Projects</MenuItem>
                     <MenuItem component={HashLink} to='#contact' onClick={handleClose}>Contact Me</MenuItem>
-                    <MenuItem component={Link}>Resume</MenuItem>
+                    <MenuItem component={Link} onClick={() => {downloadClick(resumeURL)}}>Resume</MenuItem>
                 </Menu>
 
 
@@ -106,7 +128,13 @@ function NavBar() {
                         Contact Me
                     </LinkStyle>
                 </Toolbar>
-                <Button sx={{ display: {xs: 'none', sm: 'block'}}}>RESUME</Button>
+                    <Button onClick={() => {downloadClick(resumeURL)}} sx={{ display: {xs: 'none', sm: 'block'}, width: '7rem' }}>
+                        <FontAwesomeIcon icon={faFileArrowDown} style={{color: "#ffffff", height: 30}}/>
+                        <div id='text-overlay'>
+                            My Resume
+                        </div>                
+                    </Button>
+          
             </Navbar>
 
 

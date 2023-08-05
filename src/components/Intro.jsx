@@ -37,11 +37,11 @@ function Intro() {
     // TYPE EFFECT
     useEffect(() => {
         const typed = new Typed(changingText.current, {
-            strings: ["Traveler 🛫", "Painter 🎨", "Dog Servant 🐶", "Garnder 🪴" ],
+            strings: ["Traveler 🛫", "Painter 🎨", "Dog Mom 🐶", "Gardner 🪴" ],
             startDelay: 300,
-            typeSpeed: 200,
+            typeSpeed: 150,
             backSpeed: 150,
-            backDelay: 100,
+            backDelay: 300,
             smartBackspace: true,
             loop: true,
             showCursor: true,

@@ -20,7 +20,7 @@ const WorkIntro = styled(Box) ({
     flexDirection: 'column',
     width: 'inherit',
     marginTop: '5rem',
-    marginBottom: '5rem',
+  
 
 
 })
@@ -69,7 +69,7 @@ function WorkHome() {
 
                 {/* PROJECT 1 */}
                 <SingleProjectBox sx={{flexDirection: {xs: 'column', sm: 'column', md: 'column', lg: 'row'}}}>
-                    <Box component="img" sx={{display: 'flex', justifyContent: 'center', alignSelf: 'center', margin: 3, height: 450, 
+                    <Box component="img" sx={{display: 'flex', justifyContent: 'center', alignSelf: 'center', margin: 3, height: 350, 
                         width: { xs: 400, sm: 500, md: 550, lg: 650, xl: 800}}} 
                         src="./src/assets/games.svg" alt='website screenshot'>
                     </Box>
@@ -101,6 +101,10 @@ function WorkHome() {
                         <Link href='https://levelup-games.netlify.app/'>
                             <Button sx={{margin: 1, backgroundColor: '#838FA9', color: '#241C2F', fontSize: 20, height: 60, width: 200}}>View It Here</Button>
                         </Link>
+
+                        <Link href="https://github.com/14-21/Frontend-Capstone">
+                            <Button sx={{margin: 1, backgroundColor: '#838FA9', color: '#241C2F', fontSize: 20, height: 60, width: 200}}>View Code</Button>
+                        </Link>
                     </Box>
                 </SingleProjectBox>
 
@@ -108,7 +112,7 @@ function WorkHome() {
 
                 {/* PROJECT 2 */}
                 <SingleProjectBox sx={{flexDirection: {xs: 'column', sm: 'column', md: 'column', lg: 'row'}}}>
-                    <Box component="img" sx={{display: 'flex', justifyContent: 'center', alignSelf: 'center', margin: 3, height: 450, 
+                    <Box component="img" sx={{display: 'flex', justifyContent: 'center', alignSelf: 'center', margin: 3, height: 350, 
                         width: { xs: 400, sm: 500, md: 550, lg: 650, xl: 800}}} 
                         src="./src/assets/strangers.svg" alt='website screenshot'>
                     </Box>
@@ -137,29 +141,40 @@ function WorkHome() {
                         <Link href="https://strangersthingsproject.netlify.app/">
                             <Button sx={{margin: 1, backgroundColor: '#838FA9', color: '#241C2F', fontSize: 20, height: 60, width: 200}}>View It Here</Button>
                         </Link>
+
+                        <Link href="https://github.com/kgaz410/Strangers-Things/">
+                            <Button sx={{margin: 1, backgroundColor: '#838FA9', color: '#241C2F', fontSize: 20, height: 60, width: 200}}>View Code</Button>
+                        </Link>
                     </Box>
                 </SingleProjectBox>
-
-
-
             </ProjectsContainer>
+
+             {/* WORK MORE */}
+            <br></br>
+            <br></br>
+             <Box sx={{display: 'flex', marginBottom: 10, flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+                <Typography sx={{fontFamily: 'Crimson Text', fontSize: 30, color: '#F6F2F3'}}>
+                    More projects coming soon !
+                </Typography>
+            
+            </Box>
+
         </WorkContainer>
-
-
-
 
     )
 }
 
 export default WorkHome;
 
+
+
  {/* WORK MORE */}
-//  <Box sx={{display: 'flex', marginBottom: 10, flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+{/* //  <Box sx={{display: 'flex', marginBottom: 10, flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
 //  <Typography sx={{fontFamily: 'Crimson Text', fontSize: 30, color: '#F6F2F3'}}>
 //      To see more projects that I have built, click the button below!
 //  </Typography>
 //  <br></br>
-//  <br></br>
+//  <br></br> */}
  {/* ADDD LINK */}
  {/* <Button sx={{backgroundColor: '#241C2F', color: '#F6F2F3', fontSize: 20, height: 60, width: 250}}>More Projects</Button>
 

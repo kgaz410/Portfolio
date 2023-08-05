@@ -18,6 +18,30 @@
 
  }
 
+ #text-overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0, 0.6);
+  color: rgb(224, 222, 222);
+  display: flex;
+  font-family: 'Poppins' ;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s;
+ } 
+ 
+ #text-overlay:hover{
+  opacity: 1;
+ }
+
+
+
+
 /* 
  .menu-link:before {
    display: block;
