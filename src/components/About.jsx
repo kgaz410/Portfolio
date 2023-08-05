@@ -52,7 +52,7 @@ function About() {
                 </Typography>
 
                 <Avatar sx={{boxShadow: 20, marginTop: '2rem', width: {xs: '15rem', sm: '25rem'}, height: {xs: '15rem', sm: '25rem'}}}
-                    alt="Kelsey" src="./src/assets/B9E4DDFA-9462-4478-B0C7-75F216275B7A.jpeg" />
+                    alt="Kelsey" src="./src/assets/me.jpg" />
 
             </AboutIntroPic>
          

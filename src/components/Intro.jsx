@@ -7,7 +7,7 @@ import { useRef, useEffect } from 'react';
 
 
 
-const imageURL = "src/assets/john-towner-JgOeRuGD_Y4-unsplash.jpg"
+const imageURL = "./src/assets/mountains.jpg"
 
 const IntroBackground = styled(Box)({
     width: "100%",

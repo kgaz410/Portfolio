@@ -113,7 +113,7 @@ const SingleIconBox = styled(Box) ({
                 </SingleIconBox>
 
                 <SingleIconBox>
-                    <img style={{height: 130}}src="./src/assets/otttq59q1hrivd9utlsva6mdg9-7b390df09dc70e1b641188de2bb713fc.png"></img>
+                    <img style={{height: 130}}src="./src/assets/vscodeicon.png"></img>
                     <Typography sx={{textAlign: 'center', color: 'white', fontSize: 20}}>VS Code</Typography>
                 </SingleIconBox>
 
